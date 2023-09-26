@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Суммарные показатели производства роботов за последнюю неделю</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Суммарные показатели производства роботов за последнюю неделю</h1>
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Модель</th>
+                    <th>Версия</th>
+                    <th>Количество за неделю</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for robot in robots %}
+                <tr>
+                    <td>{{ robot.model }}</td>
+                    <td>{{ robot.version }}</td>
+                    <td>{{ robot.week_count }}</td>
+                </tr>
+                {% endfor %}
+            <a href="{% url 'download_summary_excel' %}" class="btn btn-primary">Скачать Excel</a>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
