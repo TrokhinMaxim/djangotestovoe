@@ -6,15 +6,22 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('robots', '0005_alter_robot_created'),
+        ("robots", "0005_alter_robot_created"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='robot',
-            name='created',
-            field=models.DateTimeField(default=datetime.datetime.now, validators=[django.core.validators.MaxValueValidator(datetime.datetime(2023, 9, 25, 17, 52, 36, 597012))], verbose_name='Создан'),
+            model_name="robot",
+            name="created",
+            field=models.DateTimeField(
+                default=datetime.datetime.now,
+                validators=[
+                    django.core.validators.MaxValueValidator(
+                        datetime.datetime(2023, 9, 25, 17, 52, 36, 597012)
+                    )
+                ],
+                verbose_name="Создан",
+            ),
         ),
     ]

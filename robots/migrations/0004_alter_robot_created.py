@@ -5,15 +5,19 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('robots', '0003_alter_robot_created_alter_robot_model_and_more'),
+        ("robots", "0003_alter_robot_created_alter_robot_model_and_more"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='robot',
-            name='created',
-            field=models.DateTimeField(default=datetime.datetime(2023, 9, 25, 17, 36, 30, 903677, tzinfo=datetime.timezone.utc), verbose_name='Создан'),
+            model_name="robot",
+            name="created",
+            field=models.DateTimeField(
+                default=datetime.datetime(
+                    2023, 9, 25, 17, 36, 30, 903677, tzinfo=datetime.timezone.utc
+                ),
+                verbose_name="Создан",
+            ),
         ),
     ]

@@ -5,15 +5,16 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('robots', '0004_alter_robot_created'),
+        ("robots", "0004_alter_robot_created"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='robot',
-            name='created',
-            field=models.DateTimeField(default=datetime.datetime.now, verbose_name='Создан'),
+            model_name="robot",
+            name="created",
+            field=models.DateTimeField(
+                default=datetime.datetime.now, verbose_name="Создан"
+            ),
         ),
     ]

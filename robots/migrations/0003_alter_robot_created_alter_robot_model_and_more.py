@@ -5,30 +5,31 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('robots', '0002_alter_robot_created'),
+        ("robots", "0002_alter_robot_created"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='robot',
-            name='created',
-            field=models.DateTimeField(default=datetime.datetime.now, verbose_name='Создан'),
+            model_name="robot",
+            name="created",
+            field=models.DateTimeField(
+                default=datetime.datetime.now, verbose_name="Создан"
+            ),
         ),
         migrations.AlterField(
-            model_name='robot',
-            name='model',
-            field=models.CharField(max_length=2, verbose_name='Модель'),
+            model_name="robot",
+            name="model",
+            field=models.CharField(max_length=2, verbose_name="Модель"),
         ),
         migrations.AlterField(
-            model_name='robot',
-            name='serial',
-            field=models.CharField(max_length=5, verbose_name='Серия'),
+            model_name="robot",
+            name="serial",
+            field=models.CharField(max_length=5, verbose_name="Серия"),
         ),
         migrations.AlterField(
-            model_name='robot',
-            name='version',
-            field=models.CharField(max_length=2, verbose_name='Версия'),
+            model_name="robot",
+            name="version",
+            field=models.CharField(max_length=2, verbose_name="Версия"),
         ),
     ]

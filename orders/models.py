@@ -4,5 +4,9 @@ from customers.models import Customer
 
 
 class Order(models.Model):
-    customer = models.ForeignKey(Customer,on_delete=models.CASCADE)
-    robot_serial = models.CharField(max_length=5,blank=False, null=False)
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    robot_serial = models.CharField(max_length=5, blank=False, null=False)
+    robot_available = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.robot_serial} - {self.robot_available}"
